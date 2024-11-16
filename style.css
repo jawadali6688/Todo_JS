@@ -1,0 +1,287 @@
+:root{
+    --text-color: rgb(250, 250, 250);
+    --background-color: rgb(14, 12, 15);
+    --edit-button-bg-color: darkgreen;
+    --edit-button-bg-hover: rgb(6, 131, 6);
+    --edit-button-bg-active:  rgb(3, 77, 3);
+    --delete-button-bg-color: darkred;
+    --delete-button-bg-hover: rgb(170, 10, 10);
+    --delete-button-bg-active: rgb(78, 5, 5);
+    --add-button-bg-color: darkblue;
+    --button-hover-shadow: rgb(248, 0, 0);
+    --add-button-bg-hover: rgb(14, 14, 180);
+    --add-button-bg-active: rgb(3, 3, 73);
+    --box-shadow: rgb(255, 255, 255);
+    --table-heading-bg: rgb(0, 0, 0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.logo, h1{
+    color: var(--text-color);
+}
+
+.lists ul li{
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.todoSection{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    background-color: var(--background-color);
+    margin: 25px auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px var(--box-shadow);
+    padding: 40px;
+}
+
+.addItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+}
+
+.addItem input, .addBtn{
+    padding: 15px 8px;
+    width: 50%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.addItem input:focus{
+    box-shadow:  0px 0px 20px var(--button-hover-shadow);
+    width: 55%;
+    transition: all 0.3s;
+}
+
+.addItem button{
+    background-color: var(--add-button-bg-color);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.addBtn:hover{
+    background-color: var(--add-button-bg-hover);
+    box-shadow: 0px 0px 20px var(--text-color);
+    transition: ease-in-out 0.2s;
+}
+
+.addBtn:active{
+    background-color: var(--add-button-bg-active);
+    transition: ease-in-out 0.2s;
+}
+
+.todoList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoList table .itemName, .itemAction, .srNo1, .me{
+    background-color: var(--table-heading-bg);
+    padding: 20px 30px;
+    color: var(--text-color);
+}
+
+.srNo{
+    padding: 20px;
+}
+
+.itemName , .itemAction {
+    width: 200px;
+}
+
+.itemName {
+    width: 400px;
+}
+
+h1{
+    border-bottom: 5px solid white;
+    padding-bottom: 10px;
+}
+
+h1, h2{
+    color: white;
+    text-align: center;
+}
+
+table {
+    border-radius: 12px;
+}
+.editBtn{
+    background-color: var(--edit-button-bg-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--text-color);
+    transition: ease-in-out 0.2s;
+}
+
+.editBtn:hover{
+    background-color: var(--edit-button-bg-hover);
+    box-shadow: 0px 0px 20px var(--text-color);
+    transition: ease-in-out 0.2s;
+}
+
+.editBtn:active{
+    background-color: var(--edit-button-bg-active);
+    transition: ease-in-out 0.2s;
+}
+
+.deleteBtn{
+    background-color: var(--delete-button-bg-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--text-color);
+    transition: ease-in-out 0.2s;
+}
+
+.deleteBtn:hover{
+    background-color: var(--delete-button-bg-hover);
+    box-shadow: 0px 0px 20px var(--text-color);
+    transition: ease-in-out 0.2s;
+}
+
+.deleteBtn:active{
+    background-color: var(--delete-button-bg-active);
+    transition: ease-in-out 0.2s;
+}
+
+td{
+    text-align: center;
+    padding: 10px 40px;
+    color: var(--text-color);
+    transition: all 0.2s;
+    border-radius: 12px;
+}
+
+td:hover{
+    box-shadow: 0px 0px 20px var(--text-color);
+    transition: all 0.2s;
+}
+
+.actionn{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+th:hover{
+    box-shadow: 0px 0px 20px var(--button-hover-shadow);
+    transition: all 0.2s;
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 1024px) {
+    .todoSection {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .addItem input, .addBtn {
+        width: 80%;
+    }
+    .addItem input:focus {
+        width: 95%;
+    }
+
+    .todoList table {
+        font-size: 14px;
+    }
+
+    .todoList table td {
+        padding: 10px;
+    }
+    .srNo1 {
+        width: 50px;
+    }
+    .todoList table .itemName, .itemAction {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .todoSection {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .addItem input, .addBtn {
+        width: 80%;
+    }
+    .addItem input:focus {
+        width: 95%;
+    }
+
+    .todoList table {
+        font-size: 12px;
+    }
+
+    .todoList table td {
+        padding: 5px;
+    }
+
+    .todoList table .itemName, .itemAction {
+        width: 120px;
+    }
+
+    .todoList table .srNo {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .todoSection {
+        width: 98%;
+        padding: 15px;
+    }
+
+    .addItem input, .addBtn {
+        width: 80%;
+    }
+    .addItem input:focus {
+        width: 95%;
+    }
+
+    .todoList table {
+        font-size: 10px;
+    }
+
+    .todoList table td {
+        padding: 4px;
+    }
+    .todoList table .itemName, .itemAction {
+        width: 100px;
+    }
+
+    .todoList table .srNo {
+        padding: 4px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
